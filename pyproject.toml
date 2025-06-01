@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=60", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kwp2txt"
+authors = [
+    { name = "Jabez Winston", email = "jabezwinston@gmail.com" },
+]
+description = "Tool for converting Kamban word processor (KWP) files"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+dynamic = ["version"]
+keywords = ["tamil", "kamban", "kwp"]
+license = "MIT"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X",
+]
+
+[tool.setuptools]
+packages = ["kwp2txt"]
+
+[project.urls]
+"Source code" = "https://github.com/jabezwinston/kwp2txt"
+
+[project.scripts]
+kwp2txt = "kwp2txt.__main__:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "kwp2txt.version.VERSION"}
